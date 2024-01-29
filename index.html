@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 215px 1fr;
+  grid-auto-rows: auto;
+  height: 100%;
+}
+
+.left-column {
+grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.right-column {
+
+
+}
+
+.icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.dropdown-arrow {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.right-column {
+  position: relative;
+  /* Other styles... */
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%; /* Position at the middle */
+  right: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
+}
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <p class="banner-text">This is a skinny banner</p>
+    <button class="dropdown-arrow" onclick="toggleParagraph()">▼</button>
+  </div>
+  <div id="dropdown-paragraph" class="hidden">
+    <p>This is a small paragraph that shows when the dropdown arrow is clicked.</p>
+  </div>
+  <div class="container">
+    <div class="left-column">
+      <!-- Three icons, adjust the content and icon sources as needed -->
+      <img id="icon1" src="Venus-1.png" alt="Icon 1" class="icon" onclick="showVideo(0)">
+      <img id="icon2" src="Venus3_14_US_Beige_019_Top-Vari.png" alt="Icon 2" class="icon" onclick="showVideo(1)">
+      <img id="icon3" src="Venus-1.png" alt="Icon 3" class="icon" onclick="showVideo(2)">
+    </div>
+  
+    <div class="right-column">
+      <!-- Video container -->
+      <video id="videoPlayer" class="video" autoplay muted>
+        Your browser does not support the video tag.
+      </video>
+    
+      <!-- Radio buttons -->
+      <div class="radio-buttons">
+        <input type="radio" id="radio1" name="iconSelection">
+        <input type="radio" id="radio2" name="iconSelection">
+        <input type="radio" id="radio3" name="iconSelection">
+      </div>
+    </div>
+  
+  
+
+</body>
+<script src='app.js'></script>
+</html>
