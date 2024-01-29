@@ -79,8 +79,19 @@ grid-column: span 1;
   flex-direction: column;
   position: absolute;
   top: 50%; /* Position at the middle */
-  right: 10px; /* Adjust as needed */
+  right: 30px; /* Adjust as needed */
   transform: translateY(-50%);
+}
+
+.radio-buttons label {
+  transform: rotate(-90deg);
+  margin-bottom: 20px; 
+  display: none; /* Adjust as needed */
+  padding-right: 10px; /* Add some padding to prevent overlap */
+}
+
+.radio-buttons input[type="radio"]:checked + label {
+  display: block; /* Show label when the corresponding radio button is selected */
 }
   </style>
 </head>
@@ -109,9 +120,12 @@ grid-column: span 1;
       <!-- Radio buttons -->
       <div class="radio-buttons">
         <input type="radio" id="radio1" name="iconSelection">
+        <label for="radio1">Performance</label><br>
         <input type="radio" id="radio2" name="iconSelection">
+        <label for="radio2">Display</label><br>
         <input type="radio" id="radio3" name="iconSelection">
-      </div>
+        <label for="radio3">Connectivity</label><br>
+    </div>
     </div>
   
   
